@@ -6,7 +6,7 @@ metadata:
     app: vprodb
 spec:
   selector:
-    matchLabels:
+   matchLabels:
       app: vprodb
   replicas: 1
   template:
@@ -32,7 +32,7 @@ spec:
                   name: app-secret
                   key: db-pass
       nodeSelector:
-        zone: us-east-1a
+        zone: us-east-1b
       volumes:
         - name: vpro-db-data
           awsElasticBlockStore:
